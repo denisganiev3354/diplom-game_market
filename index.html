@@ -1,0 +1,201 @@
+<!-- index.html - Главная страница -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore — Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <div class="logo">
+                <span class="logo__icon">🎮</span>
+                <span class="logo__text">GameStore</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav__link active">Главная</a>
+                <a href="catalog.html" class="nav__link">Каталог</a>
+                <a href="#" class="nav__link">Акции</a>
+                <a href="#" class="nav__link">Поддержка</a>
+            </nav>
+            <div class="header__actions">
+                <a href="profile.html" class="btn btn--profile">👤 Профиль</a>
+                <button class="btn btn--outline">Войти</button>
+                <button class="btn btn--primary">Корзина</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero / баннер -->
+        <section class="hero">
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <h1 class="hero__title">Погрузись в <span class="highlight">новые миры</span></h1>
+                    <p class="hero__subtitle">Огромный выбор PC-игр, эксклюзивные скидки и мгновенная доставка ключей
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="catalog.html" class="btn btn--primary btn--large">Начать покупки</a>
+                        <button class="btn btn--outline btn--large">Смотреть трейлер</button>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="images/game_baner.jpg" alt="Игровой баннер">
+                </div>
+            </div>
+        </section>
+
+        <!-- Популярные игры -->
+        <section class="games">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">🔥 Популярные игры</h2>
+                    <a href="catalog.html" class="section__link">Смотреть все →</a>
+                </div>
+                <div class="games__grid">
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/cyberpunk2077.jpg" alt="Cyberpunk 2077">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">Cyberpunk 2077</h3>
+                            <p class="game-card__genre">RPG, Открытый мир</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽1 999</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/witcher3.jpg" alt="The Witcher 3">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">The Witcher 3</h3>
+                            <p class="game-card__genre">RPG, Приключения</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽1 499</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/rdr2.jpg" alt="Red Dead Redemption 2">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">Red Dead Redemption 2</h3>
+                            <p class="game-card__genre">Action, Открытый мир</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽2 299</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/Hollow_Knight.jpg" alt="Hollow Knight">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">Hollow Knight</h3>
+                            <p class="game-card__genre">Metroidvania, Инди</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽799</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Акции -->
+        <section class="promo">
+            <div class="container promo__inner">
+                <div class="promo__content">
+                    <h2 class="promo__title">Игровой абонемент <span class="highlight">Pro</span></h2>
+                    <p class="promo__desc">Получи доступ к библиотеке из 100+ игр, эксклюзивные скидки и ранний доступ к
+                        новинкам.</p>
+                    <button class="btn btn--primary btn--large">Подробнее</button>
+                </div>
+                <div class="promo__badge">
+                    <span class="badge">🔥 -40% на первый месяц</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Новости -->
+        <section class="news">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">📰 Новости и события</h2>
+                    <a href="#" class="section__link">Все новости →</a>
+                </div>
+                <div class="news__grid">
+                    <div class="news-item">
+                        <div class="news-item__image">
+                            <img src="images/sale.jpg" alt="Летняя распродажа">
+                        </div>
+                        <div class="news-item__body">
+                            <span class="news-item__date">12 июня 2026</span>
+                            <h3 class="news-item__title">Грандиозная летняя распродажа</h3>
+                            <p class="news-item__excerpt">Скидки до 75% на тысячи игр. Не упусти свой шанс!</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-item__image">
+                            <img src="images/new_game.jpg" alt="Новый релиз">
+                        </div>
+                        <div class="news-item__body">
+                            <span class="news-item__date">8 июня 2026</span>
+                            <h3 class="news-item__title">Релиз долгожданной новинки</h3>
+                            <p class="news-item__excerpt">Starfield уже в магазине. Окунись в космическую эпопею.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <div class="logo logo--footer">
+                    <span class="logo__icon">🎮</span>
+                    <span class="logo__text">GameStore</span>
+                </div>
+                <p class="footer__copy">© 2026 GameStore. Все права защищены.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Магазин</h4>
+                <ul class="footer__list">
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Подарочные карты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Поддержка</h4>
+                <ul class="footer__list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Возврат</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Социальные сети</h4>
+                <div class="social">
+                    <a href="#" class="social__link">📱</a>
+                    <a href="#" class="social__link">🐦</a>
+                    <a href="#" class="social__link">▶️</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

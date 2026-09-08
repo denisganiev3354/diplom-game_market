@@ -1,0 +1,222 @@
+<!-- catalog.html - Страница каталога -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore — Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <div class="logo">
+                <span class="logo__icon">🎮</span>
+                <span class="logo__text">GameStore</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="catalog.html" class="nav__link active">Каталог</a>
+                <a href="#" class="nav__link">Акции</a>
+                <a href="#" class="nav__link">Поддержка</a>
+            </nav>
+            <div class="header__actions">
+                <a href="profile.html" class="btn btn--profile">👤 Профиль</a>
+                <button class="btn btn--outline">Войти</button>
+                <button class="btn btn--primary">Корзина</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog-hero">
+            <div class="container">
+                <h1 class="catalog-hero__title">Каталог игр</h1>
+                <p class="catalog-hero__subtitle">Выбери свою следующую игровую вселенную</p>
+            </div>
+        </section>
+
+        <section class="catalog-filters">
+            <div class="container filters__inner">
+                <div class="filters__group">
+                    <label for="genre" class="filters__label">Жанр</label>
+                    <select id="genre" class="filters__select">
+                        <option value="all">Все жанры</option>
+                        <option value="rpg">RPG</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Приключения</option>
+                        <option value="indie">Инди</option>
+                        <option value="shooter">Шутер</option>
+                    </select>
+                </div>
+                <div class="filters__group">
+                    <label for="sort" class="filters__label">Сортировка</label>
+                    <select id="sort" class="filters__select">
+                        <option value="popular">По популярности</option>
+                        <option value="price-asc">Цена: по возрастанию</option>
+                        <option value="price-desc">Цена: по убыванию</option>
+                        <option value="new">Сначала новинки</option>
+                    </select>
+                </div>
+                <button class="btn btn--primary filters__apply">Применить</button>
+            </div>
+        </section>
+
+        <section class="catalog-grid">
+            <div class="container">
+                <div class="games__grid catalog__grid">
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/cyberpunk2077.jpg" alt="Cyberpunk 2077">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">Cyberpunk 2077</h3>
+                            <p class="game-card__genre">RPG, Открытый мир</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽1 999</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/witcher3.jpg" alt="The Witcher 3">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">The Witcher 3</h3>
+                            <p class="game-card__genre">RPG, Приключения</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽1 499</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/rdr2.jpg" alt="Red Dead Redemption 2">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">Red Dead Redemption 2</h3>
+                            <p class="game-card__genre">Action, Открытый мир</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽2 299</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/Hollow_Knight.jpg" alt="Hollow Knight">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">Hollow Knight</h3>
+                            <p class="game-card__genre">Metroidvania, Инди</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽799</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/starfield.jpg" alt="Starfield">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">Starfield</h3>
+                            <p class="game-card__genre">RPG, Космос</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽3 499</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/DiabloIV.jpg" alt="Diablo IV">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">Diablo IV</h3>
+                            <p class="game-card__genre">Action, RPG</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽2 799</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/Elden_Ring.jpg" alt="Elden Ring">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">Elden Ring</h3>
+                            <p class="game-card__genre">RPG, Souls-like</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽2 599</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card__image">
+                            <img src="images/stray.jpg" alt="Stray">
+                        </div>
+                        <div class="game-card__body">
+                            <h3 class="game-card__title">Stray</h3>
+                            <p class="game-card__genre">Приключения, Инди</p>
+                            <div class="game-card__footer">
+                                <span class="game-card__price">₽1 299</span>
+                                <button class="btn btn--small btn--primary">В корзину</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="pagination">
+                    <button class="pagination__btn pagination__btn--active">1</button>
+                    <button class="pagination__btn">2</button>
+                    <button class="pagination__btn">3</button>
+                    <button class="pagination__btn">→</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <div class="logo logo--footer">
+                    <span class="logo__icon">🎮</span>
+                    <span class="logo__text">GameStore</span>
+                </div>
+                <p class="footer__copy">© 2026 GameStore. Все права защищены.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Магазин</h4>
+                <ul class="footer__list">
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Подарочные карты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Поддержка</h4>
+                <ul class="footer__list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Возврат</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Социальные сети</h4>
+                <div class="social">
+                    <a href="#" class="social__link">📱</a>
+                    <a href="#" class="social__link">🐦</a>
+                    <a href="#" class="social__link">▶️</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!-- profile.html - Страница профиля -->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore — Профиль</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <div class="logo">
+                <span class="logo__icon">🎮</span>
+                <span class="logo__text">GameStore</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="catalog.html" class="nav__link">Каталог</a>
+                <a href="#" class="nav__link">Акции</a>
+                <a href="#" class="nav__link">Поддержка</a>
+            </nav>
+            <div class="header__actions">
+                <a href="profile.html" class="btn btn--profile active">👤 Профиль</a>
+                <button class="btn btn--outline">Войти</button>
+                <button class="btn btn--primary">Корзина</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-hero">
+            <div class="container">
+                <h1 class="profile-hero__title">Личный кабинет</h1>
+            </div>
+        </section>
+
+        <section class="profile-content">
+            <div class="container profile__inner">
+                <!-- Левая колонка -->
+                <div class="profile__left">
+                    <div class="profile__avatar">
+                        <img src="images/avatar.jpg" alt="Аватар">
+                        <h2 class="profile__username">GamerPro</h2>
+                        <p class="profile__member-since">На сайте с 2024</p>
+                    </div>
+                    <div class="profile__stats">
+                        <div class="stat-item">
+                            <span class="stat-value">42</span>
+                            <span class="stat-label">Игр в библиотеке</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">1 280</span>
+                            <span class="stat-label">Часов в играх</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">15</span>
+                            <span class="stat-label">Друзей</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правая колонка -->
+                <div class="profile__right">
+                    <div class="profile__card">
+                        <h3 class="profile__card-title">👤 Личная информация</h3>
+                        <div class="profile__info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Имя</span>
+                                <span class="info-value">Casper</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">casper@game.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Дата рождения</span>
+                                <span class="info-value">12 августа 1993</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Страна</span>
+                                <span class="info-value">Россия</span>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary profile__edit-btn">Редактировать профиль</button>
+                    </div>
+
+                    <div class="profile__card">
+                        <h3 class="profile__card-title">🎮 Недавно купленные игры</h3>
+                        <div class="profile__recent-games">
+                            <div class="recent-game">
+                                <img src="images/cyberpunk2077.jpg" alt="Cyberpunk">
+                                <div class="recent-game__info">
+                                    <span class="recent-game__title">Cyberpunk 2077</span>
+                                    <span class="recent-game__date">Куплена: 05.06.2026</span>
+                                </div>
+                            </div>
+                            <div class="recent-game">
+                                <img src="images/rdr2.jpg" alt="Red Dead">
+                                <div class="recent-game__info">
+                                    <span class="recent-game__title">Red Dead Redemption 2</span>
+                                    <span class="recent-game__date">Куплена: 28.05.2026</span>
+                                </div>
+                            </div>
+                            <div class="recent-game">
+                                <img src="images/starfield.jpg" alt="Starfield">
+                                <div class="recent-game__info">
+                                    <span class="recent-game__title">Starfield</span>
+                                    <span class="recent-game__date">Куплена: 15.05.2026</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="profile__see-all">Смотреть всю библиотеку →</a>
+                    </div>
+
+                    <div class="profile__card">
+                        <h3 class="profile__card-title">⚙️ Настройки аккаунта</h3>
+                        <div class="profile__settings">
+                            <button class="btn btn--outline profile__settings-btn">Изменить пароль</button>
+                            <button class="btn btn--outline profile__settings-btn">Уведомления</button>
+                            <button class="btn btn--outline profile__settings-btn">Приватность</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <div class="logo logo--footer">
+                    <span class="logo__icon">🎮</span>
+                    <span class="logo__text">GameStore</span>
+                </div>
+                <p class="footer__copy">© 2026 GameStore. Все права защищены.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Магазин</h4>
+                <ul class="footer__list">
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Подарочные карты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Поддержка</h4>
+                <ul class="footer__list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Возврат</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Социальные сети</h4>
+                <div class="social">
+                    <a href="#" class="social__link">📱</a>
+                    <a href="#" class="social__link">🐦</a>
+                    <a href="#" class="social__link">▶️</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,860 @@
+/* style.css - Полные стили для всех страниц */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+    background-color: #0f0f1a;
+    color: #eaeaf0;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Кнопки ===== */
+.btn {
+    display: inline-block;
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+}
+
+.btn--primary {
+    background: linear-gradient(135deg, #7b2ffc, #4a1dbd);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(123, 47, 252, 0.35);
+}
+
+.btn--primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(123, 47, 252, 0.5);
+}
+
+.btn--outline {
+    background: transparent;
+    color: #eaeaf0;
+    border: 2px solid #4a4a6a;
+}
+
+.btn--outline:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: #7b2ffc;
+}
+
+.btn--profile {
+    background: rgba(123, 47, 252, 0.15);
+    color: #b47aff;
+    border: 2px solid #7b2ffc;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.btn--profile:hover {
+    background: rgba(123, 47, 252, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn--profile.active {
+    background: #7b2ffc;
+    color: #fff;
+}
+
+.btn--large {
+    padding: 14px 40px;
+    font-size: 1.15rem;
+}
+
+.btn--small {
+    padding: 6px 18px;
+    font-size: 0.9rem;
+}
+
+/* ===== Шапка ===== */
+.header {
+    background: #12121f;
+    border-bottom: 1px solid #2a2a40;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(6px);
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.logo__icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.logo__text {
+    background: linear-gradient(135deg, #b47aff, #7b2ffc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav__link {
+    color: #b0b0d0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+}
+
+.nav__link:hover,
+.nav__link.active {
+    color: #fff;
+    border-bottom-color: #7b2ffc;
+}
+
+.nav__link.active {
+    color: #fff;
+}
+
+.header__actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* ===== Hero (главная) ===== */
+.hero {
+    padding: 50px 0 60px;
+    background: radial-gradient(circle at 20% 30%, #1b1b32, #0a0a14);
+}
+
+.hero__inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero__content {
+    flex: 1 1 400px;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #b47aff, #7b2ffc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero__subtitle {
+    font-size: 1.2rem;
+    color: #b0b0d0;
+    margin-bottom: 32px;
+    max-width: 500px;
+}
+
+.hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.hero__image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero__image img {
+    max-width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    border: 1px solid #2e2e4a;
+}
+
+/* ===== Секции ===== */
+.section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.section__title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.section__link {
+    color: #7b2ffc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.section__link:hover {
+    color: #b47aff;
+    text-decoration: underline;
+}
+
+/* ===== Карточки игр ===== */
+.games {
+    padding: 60px 0 40px;
+}
+
+.games__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 28px;
+}
+
+.game-card {
+    background: #18182b;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.3s;
+    border: 1px solid #2a2a42;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    border-color: #4a2d7a;
+}
+
+.game-card__image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.game-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.game-card__body {
+    padding: 18px 16px 20px;
+}
+
+.game-card__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.game-card__genre {
+    color: #a0a0c0;
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+}
+
+.game-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.game-card__price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #b47aff;
+}
+
+/* ===== Промо ===== */
+.promo {
+    padding: 50px 0;
+    background: #12121f;
+}
+
+.promo__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: linear-gradient(135deg, #1d1d38, #0f0f1f);
+    border-radius: 40px;
+    padding: 40px 50px;
+    border: 1px solid #2f2f50;
+}
+
+.promo__content {
+    flex: 1 1 260px;
+}
+
+.promo__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.promo__desc {
+    color: #c0c0e0;
+    margin-bottom: 24px;
+    max-width: 460px;
+}
+
+.promo__badge {
+    flex: 0 0 auto;
+}
+
+.badge {
+    background: #7b2ffc;
+    padding: 12px 28px;
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: inline-block;
+    box-shadow: 0 4px 20px rgba(123, 47, 252, 0.3);
+}
+
+/* ===== Новости ===== */
+.news {
+    padding: 50px 0 70px;
+}
+
+.news__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.news-item {
+    background: #18182b;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #2a2a42;
+    transition: 0.25s;
+}
+
+.news-item:hover {
+    border-color: #7b2ffc;
+}
+
+.news-item__image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.news-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-item__body {
+    padding: 20px;
+}
+
+.news-item__date {
+    color: #7b7b9a;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.news-item__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.news-item__excerpt {
+    color: #b0b0d0;
+}
+
+/* ===== КАТАЛОГ ===== */
+.catalog-hero {
+    padding: 50px 0 30px;
+    background: radial-gradient(circle at 60% 20%, #1b1b32, #0a0a14);
+    text-align: center;
+}
+
+.catalog-hero__title {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #b47aff, #7b2ffc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.catalog-hero__subtitle {
+    font-size: 1.2rem;
+    color: #b0b0d0;
+    margin-top: 8px;
+}
+
+.catalog-filters {
+    padding: 20px 0 30px;
+    border-bottom: 1px solid #2a2a40;
+    background: #12121f;
+}
+
+.filters__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 20px 30px;
+}
+
+.filters__group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.filters__label {
+    font-weight: 500;
+    color: #b0b0d0;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+.filters__select {
+    background: #1f1f34;
+    color: #eaeaf0;
+    border: 1px solid #3a3a5a;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    min-width: 160px;
+    transition: 0.2s;
+}
+
+.filters__select:focus {
+    outline: none;
+    border-color: #7b2ffc;
+    box-shadow: 0 0 0 3px rgba(123, 47, 252, 0.25);
+}
+
+.filters__apply {
+    padding: 10px 32px;
+    margin-bottom: 0;
+}
+
+.catalog-grid {
+    padding: 40px 0 60px;
+}
+
+.catalog__grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.pagination__btn {
+    background: transparent;
+    border: 1px solid #3a3a5a;
+    color: #b0b0d0;
+    padding: 8px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s;
+    font-size: 1rem;
+}
+
+.pagination__btn:hover {
+    background: #2a2a44;
+    border-color: #7b2ffc;
+    color: #fff;
+}
+
+.pagination__btn--active {
+    background: #7b2ffc;
+    border-color: #7b2ffc;
+    color: #fff;
+}
+
+/* ===== ПРОФИЛЬ ===== */
+.profile-hero {
+    padding: 40px 0 20px;
+    background: radial-gradient(circle at 30% 20%, #1b1b32, #0a0a14);
+    text-align: center;
+}
+
+.profile-hero__title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #b47aff, #7b2ffc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.profile-content {
+    padding: 30px 0 60px;
+}
+
+.profile__inner {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+}
+
+/* Левая колонка */
+.profile__left {
+    background: #18182b;
+    border-radius: 24px;
+    padding: 30px 20px;
+    border: 1px solid #2a2a42;
+    text-align: center;
+}
+
+.profile__avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #7b2ffc;
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+.profile__username {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.profile__member-since {
+    color: #7b7b9a;
+    font-size: 0.95rem;
+}
+
+.profile__stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #2a2a42;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #b47aff;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #7b7b9a;
+    margin-top: 4px;
+}
+
+/* Правая колонка */
+.profile__right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.profile__card {
+    background: #18182b;
+    border-radius: 24px;
+    padding: 24px 28px;
+    border: 1px solid #2a2a42;
+}
+
+.profile__card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #fff;
+}
+
+.profile__info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 30px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 0.8rem;
+    color: #7b7b9a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #eaeaf0;
+    margin-top: 2px;
+}
+
+.profile__edit-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Недавние игры */
+.profile__recent-games {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.recent-game {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 12px;
+    background: #12121f;
+    border-radius: 14px;
+    transition: 0.2s;
+}
+
+.recent-game:hover {
+    background: #1f1f34;
+}
+
+.recent-game img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.recent-game__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-game__title {
+    font-weight: 600;
+    color: #eaeaf0;
+}
+
+.recent-game__date {
+    font-size: 0.85rem;
+    color: #7b7b9a;
+}
+
+.profile__see-all {
+    color: #7b2ffc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.profile__see-all:hover {
+    color: #b47aff;
+    text-decoration: underline;
+}
+
+/* Настройки */
+.profile__settings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.profile__settings-btn {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+}
+
+/* ===== Футер ===== */
+.footer {
+    background: #0b0b16;
+    border-top: 1px solid #1f1f34;
+    padding: 40px 0 30px;
+}
+
+.footer__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 32px;
+}
+
+.footer__col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.logo--footer .logo__text {
+    -webkit-text-fill-color: #b47aff;
+}
+
+.footer__copy {
+    color: #5f5f7a;
+    font-size: 0.9rem;
+    margin-top: 6px;
+}
+
+.footer__title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.footer__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer__list a {
+    color: #a0a0c0;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.footer__list a:hover {
+    color: #b47aff;
+}
+
+.social {
+    display: flex;
+    gap: 14px;
+}
+
+.social__link {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #a0a0c0;
+    transition: 0.2s;
+}
+
+.social__link:hover {
+    color: #b47aff;
+}
+
+/* ===== Адаптив ===== */
+@media (max-width: 992px) {
+    .profile__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .profile__left {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .header__inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .header__actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero__title {
+        font-size: 2.4rem;
+    }
+
+    .promo__inner {
+        padding: 30px 24px;
+    }
+
+    .promo__title {
+        font-size: 2rem;
+    }
+
+    .filters__inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filters__select {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .catalog-hero__title {
+        font-size: 2.4rem;
+    }
+
+    .profile-hero__title {
+        font-size: 2.2rem;
+    }
+
+    .profile__info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile__settings {
+        flex-direction: column;
+    }
+}
