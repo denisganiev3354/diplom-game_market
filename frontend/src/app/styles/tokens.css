@@ -1,0 +1,47 @@
+:root, 
+:root[data-theme="dark"]{
+    /* фоны */
+    --bg: #0f0f1a;
+    --bg-elevated:#12121f;
+    --bg-card:#18182b;
+    --bg-hover: #1f1f34;
+    --bg-input: #1f1f34;
+    
+    /* Границы */
+    --border: #2a2a42;
+    --border-strong: #3a3a5a;
+
+    /* текст */
+    --text-: #eaeaf0;
+    --text-muted: #b0b0d0;
+    --text-dim: #7b7b9a;
+
+    /* Акцент */
+    --accent: #7b2ffc;
+    --accent-light: #b47aff;
+    --accent-dark: #4a1dbd;
+    --accent-shadow: rgba(123, 47, 252, 0.35);
+    --accent-bg: rgba(123, 47, 252, 0.15);
+
+    /* статусы */
+    --success: rgba(123, 47, 252, 0.15);
+    --error: #ef4444;
+    --warning: #f59e0b;
+
+    /* радиусы */
+
+    --radius-sm: 10px;
+    --radius-md: 20px;
+    --radius-lg: 24px;
+    --radius-pill: 30px;
+    --radius-round: 50%;
+
+    /* тени */
+
+    --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.6); 
+    --shadow-accent: 0 4px 14px var(--accent-shadow);
+    
+
+
+}
