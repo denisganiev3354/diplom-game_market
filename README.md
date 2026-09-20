@@ -1,4 +1,17 @@
-# diplom-game_market
-Игровой магазин Casper Store Game — дипломный проект.
-Страницы: Главная, Каталог, Профиль.
-Стек: HTML, CSS, Python (локальный сервер).
+
+
+# Casper Store Game
+
+Дипломный проект — интернет-магазин игр.
+
+## Стек
+
+- Frontend: React + Vite + Redux Toolkit + React Router
+- Backend: FastAPI + SQLAlchemy + Alembic + PostgreSQL + Redis
+- Инфраструктура: Docker, Nginx
+
+## Структура
+
+- `prototype/` — исходный HTML/CSS прототип
+- `frontend/` — React-приложение
+- `backend/` — FastAPI-бэкенд
