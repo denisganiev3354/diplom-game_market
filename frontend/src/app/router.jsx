@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Layout } from '../widgets/Layout/layout';
+import { Layout } from '../widgets/Layout/Layout';
 import { HomePage } from '../pages/HomePage/HomePage';
 import { CatalogPage } from '../pages/CatalogPage/CatalogPage';
 import { ProductPage } from "../pages/ProductPage/ProductPage";
 import { ProfilePage } from '../pages/ProfilePage/ProfilePage';
-import { CheckoutPage } from "../pages/CheckoutPage/CheckotPage";
+import { CheckoutPage } from "../pages/CheckoutPage/CheckoutPage";
 import { LoginPage } from "../pages/LoginPage/LoginPage";
 import { RegisterPage } from "../pages/RegisterPage/RegisterPage";
 import { AdminPage } from '../pages/AdminPage/AdminPage';
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
     {
         path: '/',
         element: <Layout />,
-        errorElement: <NotFountPage />,
+        errorElement: <NotFoundPage />,
         children:[
             {index: true, element: <HomePage/>},
             {path: 'catalog', element:<CatalogPage /> },
@@ -25,6 +25,6 @@ export const router = createBrowserRouter([
             {path: 'register',element:<RegisterPage />},
             {path: 'admin',element:<AdminPage />},
             {path: '*',element:<NotFoundPage />},
-        ],w
+        ],
     }
 ]) 

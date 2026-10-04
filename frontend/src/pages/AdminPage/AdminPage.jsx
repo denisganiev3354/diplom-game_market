@@ -1,4 +1,4 @@
-export function Admin() {
+export function AdminPage() {
     return (
         <div className="container" style={{padding: '60px 20px'}}>
             <h1>Админ панель</h1>

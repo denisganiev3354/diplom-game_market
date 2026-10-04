@@ -5,10 +5,10 @@ export function Header() {
     return (
         <header className={styles.header}>
             <div className={'container ${styles.inner}'}>
-                <link to="/" className={styles.logo}>
+                <Link to="/" className={styles.logo}>
                     <span className={styles.logoIcon}>🎮</span>
                     <span className={styles.logoText}>Casper Store Game</span>
-                </link>
+                </Link>
 
                 <nav className={styles.nav}>
                     <NavLink 
@@ -35,7 +35,7 @@ export function Header() {
                 <div className={styles.actions}>
                     <Link to="profile" className={styles.profileBtn}>👤Профиль</Link>
                     <Link to="/login" className={styles.outlineBtn}>Войти</Link>
-                    <link to="/cart" className='{styles.primaryBtn}'>Корзина</link>
+                    <Link to="/cart" className='{styles.primaryBtn}'>Корзина</Link>
                 </div>
             </div>
         </header>

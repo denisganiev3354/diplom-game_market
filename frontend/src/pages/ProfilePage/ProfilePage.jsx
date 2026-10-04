@@ -1,4 +1,4 @@
-export function Profile() {
+export function ProfilePage() {
     return (
         <div className="container" style={{padding: '60px 20px'}}>
             <h1>Страница профиля</h1>

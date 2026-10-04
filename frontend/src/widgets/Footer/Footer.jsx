@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import styles from '.Footer.module.css'
+import styles from './Footer.module.css'
 
 export function Footer() {
     return (
@@ -12,15 +12,15 @@ export function Footer() {
                     </div>
                     <p className={styles.copy}>© 2026 Casper Store Game. Все права защищены.</p>
                 </div>
-                <div className={style.col}>
-                    <h4 className={style.title}>Магазин</h4>
-                    <ul className={style.list}>
-                        <li><link to="/catalog">Каталог</link></li>
-                        <li><link to="/promo">Акции</link></li>
-                        <li><link to="/gift-card">Подарочные карты</link></li>
+                <div className={styles.col}>
+                    <h4 className={styles.title}>Магазин</h4>
+                    <ul className={styles.list}>
+                        <li><Link to="/catalog">Каталог</Link></li>
+                        <li><Link to="/promo">Акции</Link></li>
+                        <li><Link to="/gift-card">Подарочные карты</Link></li>
                     </ul>
                 </div>
-                <div className={style.col}>
+                <div className={styles.col}>
                     <h4 className={styles.title}>Поддержка</h4>
                         <ul className={styles.list}>
                             <li><Link to="/faq">FAQ</Link></li>

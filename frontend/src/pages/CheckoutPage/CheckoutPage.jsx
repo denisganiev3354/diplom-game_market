@@ -1,4 +1,4 @@
-export function Checkout() {
+export function CheckoutPage() {
     return (
         <div className="container" style={{padding: '60px 20px'}}>
             <h1>Страница оформления заказа</h1>
