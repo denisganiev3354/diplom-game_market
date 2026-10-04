@@ -1,0 +1,130 @@
+.header {
+background: var(--bg-elevated);
+border-bottom: 1px solid var(--border);
+padding: 16px 0;
+position: sticky;
+top: 0;
+z-index: 50;
+backdrop-filter: blur(6px);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.logoIcon {
+    line-height: 1;
+    font-size: 2rem;
+}
+
+.logoText {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background: linear-gradient(135deg, var(--accent-light), var(--accent));
+}
+
+.nav {
+    gap: 28px;
+    align-items: center;
+    display: flex;
+}
+
+.navLink {
+    font-weight: 500;
+    transition: color 0.2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+    color: var(--text-muted);
+}
+
+.navLink:hover {
+    color: var(--text);
+}
+
+.active {
+    color: var(--text);
+    border-bottom-color: var(--accent);
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.profileBtn,
+.outlineBtn,
+.primaryBtn {
+    text-align: center;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 24px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all var(--transition);
+    letter-spacing: 0.3px;
+}
+
+.profileBtn {
+    background: var(--accent-bg);
+    color: var(--accent-light);
+    border: 2px solid var(--accent);
+    padding: 10px 20px;
+}
+
+.profileBtn:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.outlineBtn {
+    color: var(--text);
+    border: 2px solid var(--border-strong);
+}
+
+.outlineBtn:hover {
+    border-color: var(--accent);
+    background: var(--bg-hover);
+}
+
+.primaryBtn {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    box-shadow: var(--shadow-accent);
+}
+
+.primaryBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px var(--accent-shadow);
+}
+
+@media (max-width: 700px) {
+    .inner {
+    flex-direction: column;
+    align-items: stretch;
+}
+.nav {
+flex-wrap: wrap;
+justify-content: center;
+gap: 14px;
+    }
+    .actions {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+}

@@ -42,6 +42,35 @@
     --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.6); 
     --shadow-accent: 0 4px 14px var(--accent-shadow);
     
+    /* шрифты */
+    --font-heading: 'Unbouded', 'Segoe UI', system-ui,  sans-serif;
+    --font-body: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
 
+    /* Переходы */
+    --transition: 0.25s ease;
+}
+
+:root[data-theme="light"] {
+    --bg:#f5f5fa;
+    --bg-elevated:#ffffff;
+    --bg-card:#ffffff;
+    --bg-hover:#f0f0f5;
+    --bg-input:#ffffff;
+
+    --border: #e0e0ea;
+    --border-strong: #c8c8d8;
+
+    --text: #1a1a2e;
+    --text-muted: #4a4a6a;
+    --text-dim: #8a8aa0;
+    
+    --accent: #6a1fe0;
+    --accent-light: #8b4aff;
+    --accent-dark: #4a1dbd;
+    --accent-shadow: rgba(106, 31, 224, 0.25);
+    --accent-bg: rgba(106, 31, 224, 0.1);
+    
+    --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 16px 40px rgba(0, 0, 0, 0.12);
 
 }
