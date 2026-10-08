@@ -1,0 +1,72 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* ===== Размеры ===== */
+.small {
+    padding: 6px 18px;
+    font-size: 0.9rem;
+}
+
+.medium {
+    padding: 10px 24px;
+    font-size: 1rem;
+}
+
+.large {
+    padding: 14px 40px;
+    font-size: 1.15rem;
+}
+
+/* ===== Варианты ===== */
+.primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    color: #fff;
+    box-shadow: 0 4px 14px var(--accent-shadow);
+}
+
+.primary:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px var(--accent-shadow);
+}
+
+.outline {
+    color: var(--text);
+    border: 2px solid var(--border-strong);
+}
+
+.outline:hover:not(:disabled) {
+    border-color: var(--accent);
+    background: var(--bg-hover);
+}
+
+.profile {
+    background: var(--accent-bg);
+    color: var(--accent-light);
+    border: 2px solid var(--accent);
+}
+
+.profile:hover:not(:disabled) {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
+}

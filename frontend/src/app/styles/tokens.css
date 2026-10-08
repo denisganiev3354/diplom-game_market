@@ -12,7 +12,7 @@
     --border-strong: #3a3a5a;
 
     /* текст */
-    --text-: #eaeaf0;
+    --text: #eaeaf0;
     --text-muted: #b0b0d0;
     --text-dim: #7b7b9a;
 
@@ -24,7 +24,7 @@
     --accent-bg: rgba(123, 47, 252, 0.15);
 
     /* статусы */
-    --success: rgba(123, 47, 252, 0.15);
+    --success: #22c55e;
     --error: #ef4444;
     --warning: #f59e0b;
 
@@ -43,7 +43,7 @@
     --shadow-accent: 0 4px 14px var(--accent-shadow);
     
     /* шрифты */
-    --font-heading: 'Unbouded', 'Segoe UI', system-ui,  sans-serif;
+    --font-heading: 'Unbounded', 'Segoe UI', system-ui,  sans-serif;
     --font-body: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
 
     /* Переходы */
