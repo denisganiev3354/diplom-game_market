@@ -19,6 +19,7 @@
 }
 
 .image {
+    position: relative;
     width: 100%;
     aspect-ratio: 16 / 10;
     overflow: hidden;
@@ -35,6 +36,19 @@
 
 .card:hover .image img {
     transform: scale(1.06);
+}
+
+.discountBadge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--error);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .body {
@@ -72,10 +86,25 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .price {
     font-weight: 700;
     font-size: 1.15rem;
     color: var(--accent-light);
+    line-height: 1.1;
+}
+
+.oldPrice {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    text-decoration: line-through;
 }

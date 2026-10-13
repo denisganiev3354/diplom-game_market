@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Container } from '../../../../shared/ui/Container/Container';
-import { GameCard, mockGames } from '../../../../entities/game';
+import { GameGrid, mockGames } from '../../../../entities/game';
+
 import styles from './PopularGames.module.css';
 
 export function PopularGames() {
@@ -15,15 +16,10 @@ export function PopularGames() {
                     Смотреть все →
                     </Link>
                 </div>
-                <div className={styles.grid}>
-                    {popular.map((game)=>(
-                        <GameCard
-                        key={game.id}
-                        game={game}
-                        onAddToCart={(g) => console.log('В корзину:' , g.title)}
-                        />
-                    ))}
-                </div>
+                    <GameGrid
+                        games={popular}
+                        onAddToCart={(g) => console.log('В корзину', g.title)}
+                    />
             </Container>
         </section>
     );
