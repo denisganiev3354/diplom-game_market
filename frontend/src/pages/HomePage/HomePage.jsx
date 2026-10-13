@@ -1,31 +1,39 @@
-// export function HomePage() {
-//     return(
-//     <div className="container" style={{padding: '60px 20px'}}>
-//         <h1>Главная</h1>
-//         <p>Здесь будет Hero игры, акции, новости.</p>
-//     </div>
-//     )
-// }
+import { Hero } from './sections/Hero/Hero';
+import {PopularGames } from './sections/PopularGames/PopularGames';
+import { PromoBanner } from './sections/PromoBanner/Promobanner';
+import { NewsSection } from './sections/NewsSection/NewsSection';
 
-import { Button } from '../../shared/ui/Button/Button';
-import { Container } from '../../shared/ui/Container/Container'
 
 export function HomePage() {
     return(
-        <Container>
-            <div style={{padding: '60px 0'}}>
-                <h1>главная</h1>
-                <p style={{marginBottom: 24}}>Проверяем UI-компоненты</p>
+        // <Container>
+        //     <div style={{padding: '60px 0'}}>
+        //         <h1>главная</h1>
+        //         <p style={{marginBottom: 24}}>Проверяем UI-компоненты</p>
                 
-                <div style={{ display: 'flex', gap:12, flexWrap: 'wrap'}}>
-                    <Button variant="primary" size="large">Primary large</Button>
-                    <Button variant="primary">Primary medium</Button>
-                    <Button variant="primary" size="small">Primary small</Button>
-                    <Button variant="outline">Outline</Button>
-                    <Button variant="profile">Профиль</Button>
-                    <Button variant="primary" disabled>Disabled</Button>
-                </div>
-            </div>
-        </Container>
+        //         <div 
+        //         style={{ 
+        //             display: 'flex', 
+        //             gap:12, 
+        //             flexWrap: 'wrap'
+        //         }}
+        //     >
+
+        //             {mockGames.map((game) =>(
+        //                 <GameCard
+        //                     key={game.id}
+        //                     game={game}
+        //                     onAddToCart={(g) => console.log('Добавлено в корзину:', g.title)}
+        //                 />
+        //             ))}
+        //         </div>
+        //     </div>
+        // </Container>
+        <>
+            <Hero />
+            <PopularGames />
+            <PromoBanner />
+            <NewsSection />
+        </>
     );
 }
