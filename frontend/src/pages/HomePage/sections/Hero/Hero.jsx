@@ -10,7 +10,8 @@ export function Hero() {
                     <div className={styles.inner}>
                         <div className={styles.content}>
                             <h1 className={styles.title}>
-                                Погрузись в<span className={styles.highlight}>новые миры</span>
+                                Погрузись в <span className={styles.highlight}>новые миры
+                                </span>
                             </h1>
                             <p className={styles.subtitle}>
                                 Огромный выбор PC-игр, эксюзивные скидки и мгновенная доставка ключей
@@ -32,3 +33,4 @@ export function Hero() {
         </section>
     );
 }
+
