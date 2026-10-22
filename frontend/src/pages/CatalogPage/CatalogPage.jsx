@@ -3,13 +3,23 @@ import { Container } from '../../shared/ui/Container/Container';
 import { CatalogFilters } from '../../widgets/CatalogFilters/CatalogFilters';
 import { DEFAULT_FILTERS, ITEMS_PER_PAGE } from '../../widgets/CatalogFilters/constants';
 
-import { mockGames } from '../../entities/game';
+import { GameGrid, mockGames, applyFilters } from '../../entities/game';
 
 
 export function CatalogPage() {
     const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
+    const filteredGames = applyFilters(mockGames, filters);
+
     const totalPages = Math.cell(mockGames.length / ITEMS_PER_PAGE);
+
+    const startIndex = (filters.page - 1) * ITEMS_PER_PAGE;
+    const paginatedGames = filteredGames.slice(startIndex, startIndex + ITEMS_PER_PAGE)
+
+    const handleFiltersChange = (newFilters) => {
+        setFilters(newFilters);
+        window.scrollTo({top:0, behavior: 'smooth'});
+    }
 
     const handlePageChange = (page) => {
         setFilters({ ...filters, page });
