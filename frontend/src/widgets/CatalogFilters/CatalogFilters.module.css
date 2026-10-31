@@ -97,13 +97,30 @@
 @media (max-width: 700px) {
     .filters {
         position: static;
+        padding: 16px 0;
     }
-    
+
     .inner {
-        flex-direction: column;
-        align-items: stretch;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
-    
+
+    .group:first-child {
+        grid-column: 1 / -1;
+        flex: none;
+    }
+
+    .group:nth-child(2),
+    .group:nth-child(3) {
+        /* жанр и сортировка — в 2 колонки */
+    }
+
+    .group:nth-child(4),
+    .group:nth-child(5) {
+        grid-column: 1 / -1;
+    }
+
     .select,
     .input {
         width: 100%;
