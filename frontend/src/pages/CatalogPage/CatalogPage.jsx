@@ -4,6 +4,7 @@ import { CatalogFilters } from '../../widgets/CatalogFilters/CatalogFilters';
 import { DEFAULT_FILTERS, ITEMS_PER_PAGE } from '../../widgets/CatalogFilters/constants';
 
 import { GameGrid, mockGames, applyFilters } from '../../entities/game';
+import { Pagination } from '../../shared/ui/Pagination/Pagination'
 
 
 export function CatalogPage() {
@@ -11,7 +12,7 @@ export function CatalogPage() {
 
     const filteredGames = applyFilters(mockGames, filters);
 
-    const totalPages = Math.cell(mockGames.length / ITEMS_PER_PAGE);
+    const totalPages = Math.ceil(mockGames.length / ITEMS_PER_PAGE);
 
     const startIndex = (filters.page - 1) * ITEMS_PER_PAGE;
     const paginatedGames = filteredGames.slice(startIndex, startIndex + ITEMS_PER_PAGE)
