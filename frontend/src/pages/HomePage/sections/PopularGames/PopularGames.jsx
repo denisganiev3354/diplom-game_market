@@ -16,10 +16,7 @@ export function PopularGames() {
                     Смотреть все →
                     </Link>
                 </div>
-                    <GameGrid
-                        games={popular}
-                        onAddToCart={(g) => console.log('В корзину', g.title)}
-                    />
+                    <GameGrid games={popular} />
             </Container>
         </section>
     );

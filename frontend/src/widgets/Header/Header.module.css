@@ -1,11 +1,11 @@
 .header {
-background: var(--bg-elevated);
-border-bottom: 1px solid var(--border);
-padding: 16px 0;
-position: sticky;
-top: 0;
-z-index: 50;
-backdrop-filter: blur(6px);
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(6px);
 }
 
 .inner {
@@ -30,10 +30,15 @@ backdrop-filter: blur(6px);
 }
 
 .logoText {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-family: var(--font-heading);
+    font-weight: 700;
     background: linear-gradient(135deg, var(--accent-light), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* ← ЭТО главное */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    /* fallback для не-webkit браузеров */
 }
 
 .nav {
@@ -113,18 +118,63 @@ backdrop-filter: blur(6px);
     box-shadow: 0 8px 24px var(--accent-shadow);
 }
 
+.themeBtn {
+    background: transparent;
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.themeBtn:hover {
+    border-color: var(--accent);
+    background: var(--bg-hover);
+    transform: rotate(15deg);
+}
+
+.primaryBtn {
+    position: relative;
+}
+
+.cartBadge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--error);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 700px) {
     .inner {
-    flex-direction: column;
-    align-items: stretch;
-}
-.nav {
-flex-wrap: wrap;
-justify-content: center;
-gap: 14px;
+        flex-direction: column;
+        align-items: stretch;
     }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+    }
+
     .actions {
-    justify-content: center;
-    flex-wrap: wrap;
-}
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }

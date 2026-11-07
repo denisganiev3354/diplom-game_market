@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './Footer.module.css'
+import { SiTelegram, SiX, SiYoutube } from '@icons-pack/react-simple-icons'
 
 export function Footer() {
     return (
@@ -31,9 +32,36 @@ export function Footer() {
                 <div className={styles.col}>
                     <h4 className="styles title">Социальные сети</h4>
                     <div className={styles.social}>
-                        <a href="https://t.me" target="_blank" rel="nooper noreferrer" className={styles.socialLink} aria-label="Telegram">📱</a>
+                        {/* <a href="https://t.me" target="_blank" rel="nooper noreferrer" className={styles.socialLink} aria-label="Telegram">📱</a>
                         <a href="https://twitter.com" target="_blank" rel="nooper noreferrer" className={styles.socialLink} aria-label="Twitter">🐦</a>
-                        <a href="https://youtube.com" target="_blank" rel="nooper noreferrer" className={styles.socialLink} aria-label="Youtube">"▶️/</a>
+                        <a href="https://youtube.com" target="_blank" rel="nooper noreferrer" className={styles.socialLink} aria-label="Youtube">▶️/</a> */}
+                        <a 
+                            href="https://t.me"
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className={styles.socialLink}
+                            aria-label='Telegram'
+                        >
+                            <SiTelegram size={24} />
+                        </a>
+                        <a
+                            href="https://twitter.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.socialLink}
+                            aria-label="Twitter"
+                        >
+                            <SiX size={24} />
+                        </a>
+                        <a
+                            href="https://youtube.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.socialLink}
+                            aria-label="YouTube"
+                        >
+                            <SiYoutube size={24} />
+                        </a>
                     </div>
                 </div>
             </div>
