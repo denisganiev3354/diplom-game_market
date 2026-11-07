@@ -1,0 +1,152 @@
+{
+    "nav": {
+        "home": "Home",
+        "catalog": "Catalog",
+        "promo": "Promo",
+        "support": "Support",
+        "profile": "Profile",
+        "login": "Log in",
+        "cart": "Cart",
+        "logout": "Log out",
+        "admin": "Admin Panel"
+    },
+    "catalog": {
+        "title": "Game Catalog",
+        "subtitle": "Choose your next gaming universe",
+        "search": "Search",
+        "genre": "Genre",
+        "sort": "Sort by",
+        "found": "Found",
+        "reset": "Reset",
+        "allGenres": "All genres",
+        "empty": "Nothing found",
+        "emptyHint": "Try changing the filters",
+        "addToCart": "Add to cart"
+    },
+    "profile": {
+        "title": "My Account",
+        "admin": "Administrator",
+        "user": "User",
+        "orders": "Order history",
+        "settings": "Settings",
+        "changePassword": "Change password",
+        "notifications": "Notifications",
+        "privacy": "Privacy"
+    },
+    "auth": {
+        "loginTitle": "Log in",
+        "loginSubtitle": "Log in to access your library",
+        "email": "Email",
+        "password": "Password",
+        "loginBtn": "Log in",
+        "noAccount": "Don't have an account?",
+        "registerLink": "Register",
+        "registerTitle": "Register",
+        "registerSubtitle": "Create an account to start shopping",
+        "name": "Name",
+        "confirmPassword": "Confirm password",
+        "registerBtn": "Register",
+        "hasAccount": "Already have an account?",
+        "loginLink": "Log in"
+    },
+    "errors": {
+        "requiredEmail": "Enter email",
+        "invalidEmail": "Invalid email",
+        "requiredPassword": "Enter password",
+        "minPassword": "Minimum 6 characters",
+        "requiredName": "Enter name",
+        "minName": "Minimum 2 characters",
+        "requiredConfirm": "Confirm password",
+        "matchPassword": "Passwords do not match"
+    },
+    "footer": {
+        "shop": "Shop",
+        "support": "Support",
+        "social": "Social media",
+        "copyright": "© 2026 Casper Store Game. All rights reserved.",
+        "faq": "FAQ",
+        "refund": "Refunds",
+        "contacts": "Contacts",
+        "giftCards": "Gift cards"
+    },
+    "catalog": {
+        "title": "Game Catalog",
+        "subtitle": "Choose your next gaming universe",
+        "search": "Search",
+        "searchPlaceholder": "Game title...",
+        "genre": "Genre",
+        "sort": "Sort",
+        "found": "Found",
+        "reset": "Reset",
+        "games": "games",
+        "addToCart": "Add to cart",
+        "genres": {
+            "all": "All genres",
+            "rpg": "RPG",
+            "action": "Action",
+            "adventure": "Adventure",
+            "indie": "Indie",
+            "shooter": "Shooter",
+            "strategy": "Strategy"
+        },
+        "sorts": {
+            "popularity": "By popularity",
+            "rating": "By rating",
+            "priceAsc": "Price: low to high",
+            "priceDesc": "Price: high to low",
+            "newest": "Newest first"
+        }
+    },
+    "product": {
+        "about": "About the game",
+        "specs": "Specifications",
+        "genre": "Genre",
+        "year": "Release year",
+        "rating": "Rating",
+        "platform": "Platform",
+        "language": "Interface language",
+        "tags": "Tags",
+        "similar": "Similar games",
+        "viewAll": "View all →",
+        "buyNow": "Buy now",
+        "notFound": "Game not found",
+        "backToCatalog": "← Back to catalog",
+        "addToCart": "Add to cart"
+    },
+    "cart": {
+        "title": "Cart",
+        "empty": "Your cart is empty",
+        "emptyHint": "Check out the catalog — there's a lot of interesting stuff there",
+        "goToCatalog": "Go to catalog",
+        "total": "Total",
+        "items": "Items",
+        "sum": "Sum",
+        "checkout": "Checkout",
+        "clear": "Clear cart",
+        "remove": "Remove from cart"
+    },
+    "hero": {
+        "titlePrefix": "Dive into",
+        "titleHighlight": "new worlds",
+        "subtitle": "Huge selection of PC games, exclusive discounts and instant key delivery",
+        "start": "Start shopping",
+        "trailer": "Watch trailer"
+    },
+    "home": {
+        "popular": "🔥 Popular games",
+        "viewAll": "View all →",
+        "promoTitle1": "Gaming subscription",
+        "promoTitle2": "Pro",
+        "promoDesc": "Get access to a library of 100+ games, exclusive discounts, and early access to new releases.",
+        "promoBtn": "Learn more",
+        "promoBadge": "🔥 -40% for the first month",
+        "newsTitle": "📰 News & events",
+        "newsAll": "All news →",
+        "news1Date": "June 12, 2026",
+        "news1Title": "Huge Summer Sale",
+        "news1Excerpt": "Discounts up to 75% on thousands of games. Don't miss your chance!",
+        "news2Date": "June 8, 2026",
+        "news2Title": "Release of the long-awaited novelty",
+        "news2Excerpt": "Starfield is already in the store. Dive into the space epic."
+    }
+}

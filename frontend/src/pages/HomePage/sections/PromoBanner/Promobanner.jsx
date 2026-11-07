@@ -1,24 +1,27 @@
+import { useTranslation } from 'react-i18next'; // ← ДОБАВИТЬ
 import { Button } from '../../../../shared/ui/Button/Button';
 import { Container } from '../../../../shared/ui/Container/Container';
 import styles from './PromoBanner.module.css';
 
 export function PromoBanner() {
-    return(
+    const { t } = useTranslation(); // ← ДОБАВИТЬ
+
+    return (
         <section className={styles.section}>
             <Container>
                 <div className={styles.banner}>
                     <div className={styles.content}>
                         <h2 className={styles.title}>
-                            Игровой абонемент <span className={styles.highlight}>Pro</span>
+                            {t('home.promoTitle1')} <span className={styles.highlight}>{t('home.promoTitle2')}</span>
                         </h2>
                         <p className={styles.description}>
-                            Получи доступ к библиотеке из 100+ игр, эксклюзивные скидки и ранний доступ к новинкам.
+                            {t('home.promoDesc')}
                         </p>
-                        <Button size="large" >Подробнее</Button>
+                        <Button size="large">{t('home.promoBtn')}</Button>
                     </div>
 
                     <div className={styles.badgeWrapper}>
-                        <span className={styles.badge}>🔥 -40% на первый месяц</span>
+                        <span className={styles.badge}>{t('home.promoBadge')}</span>
                     </div>
                 </div>
             </Container>

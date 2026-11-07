@@ -1,0 +1,152 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "catalog": "Katalog",
+        "promo": "Aktionen",
+        "support": "Support",
+        "profile": "Profil",
+        "login": "Anmelden",
+        "cart": "Warenkorb",
+        "logout": "Abmelden",
+        "admin": "Admin-Panel"
+    },
+    "catalog": {
+        "title": "Spielekatalog",
+        "subtitle": "Wähle dein nächstes Gaming-Universum",
+        "search": "Suche",
+        "genre": "Genre",
+        "sort": "Sortieren nach",
+        "found": "Gefunden",
+        "reset": "Zurücksetzen",
+        "allGenres": "Alle Genres",
+        "empty": "Nichts gefunden",
+        "emptyHint": "Versuchen Sie, die Filter zu ändern",
+        "addToCart": "In den Warenkorb"
+    },
+    "profile": {
+        "title": "Mein Konto",
+        "admin": "Administrator",
+        "user": "Benutzer",
+        "orders": "Bestellverlauf",
+        "settings": "Einstellungen",
+        "changePassword": "Passwort ändern",
+        "notifications": "Benachrichtigungen",
+        "privacy": "Datenschutz"
+    },
+    "auth": {
+        "loginTitle": "Anmelden",
+        "loginSubtitle": "Melden Sie sich an, um auf Ihre Bibliothek zuzugreifen",
+        "email": "E-Mail",
+        "password": "Passwort",
+        "loginBtn": "Anmelden",
+        "noAccount": "Kein Konto?",
+        "registerLink": "Registrieren",
+        "registerTitle": "Registrieren",
+        "registerSubtitle": "Erstellen Sie ein Konto, um mit dem Einkauf zu beginnen",
+        "name": "Name",
+        "confirmPassword": "Passwort bestätigen",
+        "registerBtn": "Registrieren",
+        "hasAccount": "Haben Sie bereits ein Konto?",
+        "loginLink": "Anmelden"
+    },
+    "errors": {
+        "requiredEmail": "E-Mail eingeben",
+        "invalidEmail": "Ungültige E-Mail",
+        "requiredPassword": "Passwort eingeben",
+        "minPassword": "Mindestens 6 Zeichen",
+        "requiredName": "Namen eingeben",
+        "minName": "Mindestens 2 Zeichen",
+        "requiredConfirm": "Passwort bestätigen",
+        "matchPassword": "Passwörter stimmen nicht überein"
+    },
+    "footer": {
+        "shop": "Shop",
+        "support": "Support",
+        "social": "Soziale Netzwerke",
+        "copyright": "© 2026 Casper Store Game. Alle Rechte vorbehalten.",
+        "faq": "FAQ",
+        "refund": "Rückerstattungen",
+        "contacts": "Kontakte",
+        "giftCards": "Geschenkkarten"
+    },
+    "catalog": {
+        "title": "Spielekatalog",
+        "subtitle": "Wähle dein nächstes Gaming-Universum",
+        "search": "Suche",
+        "searchPlaceholder": "Spieltitel...",
+        "genre": "Genre",
+        "sort": "Sortieren",
+        "found": "Gefunden",
+        "reset": "Zurücksetzen",
+        "games": "Spiele",
+        "addToCart": "In den Warenkorb",
+        "genres": {
+            "all": "Alle Genres",
+            "rpg": "RPG",
+            "action": "Action",
+            "adventure": "Abenteuer",
+            "indie": "Indie",
+            "shooter": "Shooter",
+            "strategy": "Strategie"
+        },
+        "sorts": {
+            "popularity": "Nach Beliebtheit",
+            "rating": "Nach Bewertung",
+            "priceAsc": "Preis: aufsteigend",
+            "priceDesc": "Preis: absteigend",
+            "newest": "Neueste zuerst"
+        }
+    },
+    "product": {
+        "about": "Über das Spiel",
+        "specs": "Spezifikationen",
+        "genre": "Genre",
+        "year": "Erscheinungsjahr",
+        "rating": "Bewertung",
+        "platform": "Plattform",
+        "language": "Schnittstellensprache",
+        "tags": "Tags",
+        "similar": "Ähnliche Spiele",
+        "viewAll": "Alle ansehen →",
+        "buyNow": "Jetzt kaufen",
+        "notFound": "Spiel nicht gefunden",
+        "backToCatalog": "← Zurück zum Katalog",
+        "addToCart": "In den Warenkorb"
+    },
+    "cart": {
+        "title": "Warenkorb",
+        "empty": "Ihr Warenkorb ist leer",
+        "emptyHint": "Schauen Sie im Katalog vorbei — dort gibt es viel Interessantes",
+        "goToCatalog": "Zum Katalog",
+        "total": "Gesamt",
+        "items": "Artikel",
+        "sum": "Summe",
+        "checkout": "Zur Kasse",
+        "clear": "Warenkorb leeren",
+        "remove": "Aus dem Warenkorb entfernen"
+    },
+    "hero": {
+        "titlePrefix": "Tauche in",
+        "titleHighlight": "neue Welten ein",
+        "subtitle": "Riesige Auswahl an PC-Spielen, exklusive Rabatte und sofortige Schlüssellieferung",
+        "start": "Einkauf starten",
+        "trailer": "Trailer ansehen"
+    },
+    "home": {
+        "popular": "🔥 Beliebte Spiele",
+        "viewAll": "Alle ansehen →",
+        "promoTitle1": "Gaming-Abo",
+        "promoTitle2": "Pro",
+        "promoDesc": "Erhalten Sie Zugriff auf eine Bibliothek mit über 100 Spielen, exklusive Rabatte und frühen Zugang zu Neuerscheinungen.",
+        "promoBtn": "Mehr erfahren",
+        "promoBadge": "🔥 -40% für den ersten Monat",
+        "newsTitle": "📰 News & Events",
+        "newsAll": "Alle News →",
+        "news1Date": "12. Juni 2026",
+        "news1Title": "Riesiger Sommerausverkauf",
+        "news1Excerpt": "Rabatte bis zu 75% auf Tausende von Spielen. Verpassen Sie nicht Ihre Chance!",
+        "news2Date": "8. Juni 2026",
+        "news2Title": "Veröffentlichung der lang erwarteten Neuheit",
+        "news2Excerpt": "Starfield ist bereits im Store. Tauchen Sie in das Weltraum-Epos ein."
+    }
+}

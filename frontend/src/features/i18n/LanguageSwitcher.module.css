@@ -1,0 +1,28 @@
+.switcher {
+    display: flex;
+    gap: 2px;
+    background: var(--bg-hover);
+    border-radius: var(--radius-pill);
+    padding: 3px;
+}
+
+.langBtn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.langBtn:hover {
+    color: var(--text);
+}
+
+.active {
+    background: var(--accent);
+    color: #fff;
+}

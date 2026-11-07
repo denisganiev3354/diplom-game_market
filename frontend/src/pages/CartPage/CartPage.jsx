@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next'; // ← ДОБАВИТЬ
 import { Container } from '../../shared/ui/Container/Container';
 import { Button } from '../../shared/ui/Button/Button';
 import { removeFromCart, clearCart } from '../../features/cart/cartSlice';
 import styles from './CartPage.module.css';
 
 export function CartPage() {
+    const { t } = useTranslation(); // ← ДОБАВИТЬ
     const items = useSelector((state) => state.cart.items);
     const dispatch = useDispatch();
 
@@ -15,10 +17,10 @@ export function CartPage() {
         return (
             <Container>
                 <div className={styles.empty}>
-                    <h1 className={styles.title}>Корзина пуста</h1>
-                    <p className={styles.subtitle}>Загляните в каталог — там много интересного</p>
+                    <h1 className={styles.title}>{t('cart.empty')}</h1>
+                    <p className={styles.subtitle}>{t('cart.emptyHint')}</p>
                     <Button as={Link} to="/catalog" size="large">
-                        Перейти в каталог
+                        {t('cart.goToCatalog')}
                     </Button>
                 </div>
             </Container>
@@ -28,7 +30,7 @@ export function CartPage() {
     return (
         <Container>
             <div className={styles.page}>
-                <h1 className={styles.title}>Корзина</h1>
+                <h1 className={styles.title}>{t('cart.title')}</h1>
 
                 <div className={styles.inner}>
                     <div className={styles.items}>
@@ -52,7 +54,7 @@ export function CartPage() {
                                     type="button"
                                     onClick={() => dispatch(removeFromCart(item.id))}
                                     className={styles.removeBtn}
-                                    aria-label="Удалить из корзины"
+                                    aria-label={t('cart.remove')}
                                 >
                                     ✕
                                 </button>
@@ -61,25 +63,25 @@ export function CartPage() {
                     </div>
 
                     <aside className={styles.summary}>
-                        <h2 className={styles.summaryTitle}>Итого</h2>
+                        <h2 className={styles.summaryTitle}>{t('cart.total')}</h2>
                         <div className={styles.summaryRow}>
-                            <span>Товаров:</span>
+                            <span>{t('cart.items')}:</span>
                             <span>{items.length}</span>
                         </div>
                         <div className={styles.summaryTotal}>
-                            <span>Сумма:</span>
+                            <span>{t('cart.sum')}:</span>
                             <span>₽{total.toLocaleString('ru-RU')}</span>
                         </div>
 
                         <Button size="large" fullWidth>
-                            Оформить заказ
+                            {t('cart.checkout')}
                         </Button>
                         <button
                             type="button"
                             onClick={() => dispatch(clearCart())}
                             className={styles.clearBtn}
                         >
-                            Очистить корзину
+                            {t('cart.clear')}
                         </button>
                     </aside>
                 </div>

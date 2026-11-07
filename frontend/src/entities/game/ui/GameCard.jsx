@@ -1,11 +1,12 @@
-import { Link } from 'react-router-dom'
-import { Button } from '../../../shared/ui/Button/Button'
-import styles from './GameCard.module.css'
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Button } from '../../../shared/ui/Button/Button';
+import styles from './GameCard.module.css';
 
-export function GameCard({game, onAddToCart}){
+export function GameCard({ game, onAddToCart }) {
+    const { t } = useTranslation();
     const { slug, title, genre, tags, price, oldPrice, imageUrl } = game;
-    const hasDiscount =oldPrice && oldPrice >price;
-
+    const hasDiscount = oldPrice && oldPrice > price;
 
     const handleAddToCart = (e) => {
         e.preventDefault();
@@ -17,10 +18,10 @@ export function GameCard({game, onAddToCart}){
         <article className={styles.card}>
             <Link to={`/product/${slug}`} className={styles.imageLink}>
                 <div className={styles.image}>
-                    <img src={imageUrl} alt={title} loading='lazy' />
+                    <img src={imageUrl} alt={title} loading="lazy" />
                     {hasDiscount && (
                         <span className={styles.discountBadge}>
-                            -{Math.round((1 - price/ oldPrice)* 100)}%
+                            -{Math.round((1 - price / oldPrice) * 100)}%
                         </span>
                     )}
                 </div>
@@ -37,16 +38,18 @@ export function GameCard({game, onAddToCart}){
                 </p>
 
                 <div className={styles.footer}>
-                    <span className={styles.price}>
-                        ₽ {price.toLocaleString('ru-RU')}
-                    </span>
-                    {hasDiscount && (
-                        <span className={styles.oldPrice}>
-                            ₽{oldPrice.toLocaleString('ru-RU')}
+                    <div className={styles.prices}>
+                        <span className={styles.price}>
+                            ₽{price.toLocaleString('ru-RU')}
                         </span>
-                    )}
-                    <Button size="small" onClick={handleAddToCart} >
-                        В корзину
+                        {hasDiscount && (
+                            <span className={styles.oldPrice}>
+                                ₽{oldPrice.toLocaleString('ru-RU')}
+                            </span>
+                        )}
+                    </div>
+                    <Button size="small" onClick={handleAddToCart}>
+                        {t('catalog.addToCart')}
                     </Button>
                 </div>
             </div>

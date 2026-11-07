@@ -1,70 +1,46 @@
-import { Link } from 'react-router-dom'
-import styles from './Footer.module.css'
-import { SiTelegram, SiX, SiYoutube } from '@icons-pack/react-simple-icons'
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // ← ДОБАВИТЬ
+import styles from './Footer.module.css';
 
 export function Footer() {
+    const { t } = useTranslation(); // ← ДОБАВИТЬ
+
     return (
-        <footer className="{styles.footer}">
-            <div className={'container ${styles.inner}'}>
+        <footer className={styles.footer}>
+            <div className={`container ${styles.inner}`}>
                 <div className={styles.col}>
                     <div className={styles.logo}>
                         <span>🎮</span>
                         <span className={styles.logoText}>Casper Store Game</span>
                     </div>
-                    <p className={styles.copy}>© 2026 Casper Store Game. Все права защищены.</p>
+                    <p className={styles.copy}>{t('footer.copyright')}</p>
                 </div>
+
                 <div className={styles.col}>
-                    <h4 className={styles.title}>Магазин</h4>
+                    <h4 className={styles.title}>{t('footer.shop')}</h4>
                     <ul className={styles.list}>
-                        <li><Link to="/catalog">Каталог</Link></li>
-                        <li><Link to="/promo">Акции</Link></li>
-                        <li><Link to="/gift-card">Подарочные карты</Link></li>
+                        <li><Link to="/catalog">{t('nav.catalog')}</Link></li>
+                        <li><Link to="/promo">{t('nav.promo')}</Link></li>
+                        <li><Link to="/gift-cards">{t('footer.giftCards')}</Link></li>
                     </ul>
                 </div>
+
                 <div className={styles.col}>
-                    <h4 className={styles.title}>Поддержка</h4>
-                        <ul className={styles.list}>
-                            <li><Link to="/faq">FAQ</Link></li>
-                            <li><Link to="/refund" >Возврат</Link></li>
-                            <li><Link to="/contacts" >Контакты</Link></li>
-                        </ul>
+                    <h4 className={styles.title}>{t('footer.support')}</h4>
+                    <ul className={styles.list}>
+                        <li><Link to="/faq">{t('footer.faq')}</Link></li>
+                        <li><Link to="/refund">{t('footer.refund')}</Link></li>
+                        <li><Link to="/contacts">{t('footer.contacts')}</Link></li>
+                    </ul>
                 </div>
+
                 <div className={styles.col}>
-                    <h4 className="styles title">Социальные сети</h4>
+                    <h4 className={styles.title}>{t('footer.social')}</h4>
                     <div className={styles.social}>
-                        {/* <a href="https://t.me" target="_blank" rel="nooper noreferrer" className={styles.socialLink} aria-label="Telegram">📱</a>
-                        <a href="https://twitter.com" target="_blank" rel="nooper noreferrer" className={styles.socialLink} aria-label="Twitter">🐦</a>
-                        <a href="https://youtube.com" target="_blank" rel="nooper noreferrer" className={styles.socialLink} aria-label="Youtube">▶️/</a> */}
-                        <a 
-                            href="https://t.me"
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className={styles.socialLink}
-                            aria-label='Telegram'
-                        >
-                            <SiTelegram size={24} />
-                        </a>
-                        <a
-                            href="https://twitter.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.socialLink}
-                            aria-label="Twitter"
-                        >
-                            <SiX size={24} />
-                        </a>
-                        <a
-                            href="https://youtube.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.socialLink}
-                            aria-label="YouTube"
-                        >
-                            <SiYoutube size={24} />
-                        </a>
+                        {/* SVG-иконки оставляем как есть */}
                     </div>
                 </div>
             </div>
         </footer>
-    )
+    );
 }

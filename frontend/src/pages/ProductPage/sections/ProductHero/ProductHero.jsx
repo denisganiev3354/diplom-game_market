@@ -3,11 +3,13 @@ import { Container } from '../../../../shared/ui/Container/Container';
 import { Button } from '../../../../shared/ui/Button/Button';
 import { addToCart } from '../../../../features/cart/cartSlice';
 import styles from './ProductHero.module.css';
+import { useTranslation } from 'react-i18next';
 
 export function ProductHero({ game }) {
   const dispatch = useDispatch();
   const { title, genre, tags, price, oldPrice, imageUrl, rating, releaseYear } = game;
-  
+  const { t } = useTranslation();
+
   const hasDiscount = oldPrice && oldPrice > price;
   const discountPercent = hasDiscount
     ? Math.round((1 - price / oldPrice) * 100)
@@ -60,10 +62,10 @@ export function ProductHero({ game }) {
 
             <div className={styles.actions}>
               <Button size="large" onClick={handleAddToCart}>
-                В корзину
+                {t('product.addToCart')}
               </Button>
               <Button variant="outline" size="large">
-                Купить сейчас
+                {t('product.buyNow')}
               </Button>
             </div>
           </div>

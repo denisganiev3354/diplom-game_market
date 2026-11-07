@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../../shared/ui/Container/Container';
 import { Pagination } from '../../shared/ui/Pagination/Pagination';
 import { CatalogFilters } from '../../widgets/CatalogFilters/CatalogFilters';
@@ -6,6 +7,7 @@ import { DEFAULT_FILTERS, ITEMS_PER_PAGE } from '../../widgets/CatalogFilters/co
 import { GameGrid, mockGames, applyFilters } from '../../entities/game';
 
 export function CatalogPage() {
+    const { t } = useTranslation();
     const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
     // 1. Применяем поиск + жанр + сортировку
@@ -34,10 +36,8 @@ export function CatalogPage() {
         <>
             <section style={{ padding: '40px 0 20px', textAlign: 'center' }}>
                 <Container>
-                    <h1 style={{ fontSize: '2.5rem', marginBottom: 8 }}>Каталог игр</h1>
-                    <p style={{ color: 'var(--text-muted)' }}>
-                        Выберите свою следующую игровую вселенную
-                    </p>
+                    <h1 style={{ fontSize: '2.5rem', marginBottom: 8 }}>{t('catalog.title')}</h1>
+                    <p style={{ color: 'var(--text-muted)' }}>{t('catalog.subtitle')}</p>
                 </Container>
             </section>
 

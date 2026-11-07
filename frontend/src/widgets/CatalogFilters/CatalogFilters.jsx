@@ -1,102 +1,94 @@
-import { Container } from "../../shared/ui/Container/Container";
-import { GENRES, SORT_OPTIONS, DEFAULT_FILTERS } from "./constants";
-import styles from './CatalogFilters.module.css'
+import { useTranslation } from 'react-i18next';
+import { Container } from '../../shared/ui/Container/Container';
+import { GENRES, SORT_OPTIONS, DEFAULT_FILTERS } from './constants';
+import styles from './CatalogFilters.module.css';
 
-export function CatalogFilters({filters, onChange, resultCount}) {
+export function CatalogFilters({ filters, onChange, resultCount }) {
+    const { t } = useTranslation();
 
     const handleSearchChange = (e) => {
-        onChange({ ...filters, search: e.target.value, page: 1});
+        onChange({ ...filters, search: e.target.value, page: 1 });
     };
 
-    const handleGenreChange = (e)  => {
-        onChange({ ...filters, genre: e.target.value, page: 1});
+    const handleGenreChange = (e) => {
+        onChange({ ...filters, genre: e.target.value, page: 1 });
     };
 
-    const handleSortChange = (e)  => {
-        onChange({ ...filters, sort: e.target.value, page: 1});
+    const handleSortChange = (e) => {
+        onChange({ ...filters, sort: e.target.value, page: 1 });
     };
 
     const handleReset = () => {
-        onChange({ ...DEFAULT_FILTERS});
+        onChange({ ...DEFAULT_FILTERS });
     };
 
-    const hasActiveFilters = 
+    const hasActiveFilters =
         filters.search !== '' ||
         filters.genre !== 'all' ||
         filters.sort !== 'popularity';
-    
+
     return (
         <section className={styles.filters}>
             <Container>
                 <div className={styles.inner}>
                     <div className={styles.group}>
-                        <label htmlFor="search" className={styles.label}>Поиск</label>
-                        <input 
+                        <label htmlFor="search" className={styles.label}>{t('catalog.search')}</label>
+                        <input
                             id="search"
                             type="text"
-                            placeholder="Название игры..."
+                            placeholder={t('catalog.searchPlaceholder')}
                             value={filters.search}
                             onChange={handleSearchChange}
-                            className={styles.input} 
+                            className={styles.input}
                         />
                     </div>
 
                     <div className={styles.group}>
-                        <label htmlFor="genre" className={styles.label}>Жанр</label>
-                        <select  
+                        <label htmlFor="genre" className={styles.label}>{t('catalog.genre')}</label>
+                        <select
                             id="genre"
                             value={filters.genre}
                             onChange={handleGenreChange}
                             className={styles.select}
                         >
-                            {GENRES.map((g)=>(
-                                <option value={g.value} key={g.value}>{g.label}</option>
+                            {GENRES.map((g) => (
+                                <option key={g.value} value={g.value}>{t(g.label)}</option>
                             ))}
                         </select>
                     </div>
 
                     <div className={styles.group}>
-                        <label htmlFor="sort" className={styles.label}>Сортировка</label>
-                        <select 
+                        <label htmlFor="sort" className={styles.label}>{t('catalog.sort')}</label>
+                        <select
                             id="sort"
                             value={filters.sort}
                             onChange={handleSortChange}
                             className={styles.select}
                         >
-                            {SORT_OPTIONS.map((s) =>(
-                                <option value={s.value}key={s.value}>{s.label}</option>
+                            {SORT_OPTIONS.map((s) => (
+                                <option key={s.value} value={s.value}>{(t(s.label))}</option>
                             ))}
                         </select>
                     </div>
 
                     <div className={styles.group}>
-                        <span className={styles.label}>Найдено</span>
+                        <span className={styles.label}>{t('catalog.found')}</span>
                         <span className={styles.counter}>
-                            {resultCount}{pluralGames(resultCount)}
+                            {resultCount} {t('catalog.games')}
                         </span>
                     </div>
 
-                    {hasActiveFilters &&(
-                        <button 
+                    {hasActiveFilters && (
+                        <button
                             type="button"
                             onClick={handleReset}
                             className={styles.reset}
                         >
-                            Сбросить
-                    </button>
+                            {t('catalog.reset')}
+                        </button>
                     )}
-
                 </div>
             </Container>
         </section>
-    )
-
-}
-
-function pluralGames(n) {
-    const mod10 = n %10;
-    const mod100 = n % 100;
-    if (mod10 === 1 && mod100 !== 11) return 'игра';
-    if(mod10 >= 2 && mod10 <= 4 && (mod100 < 10 || mod100 >= 20)) return  'игры';
-    return 'игр';
+    );
 }
